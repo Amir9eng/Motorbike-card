@@ -18,7 +18,7 @@
     font-size: 16px;
 }
 
-.flip-card {
+.motorcycle-card {
     margin: 20vh auto;
     width: 40vw;
     height: 40vh;
@@ -66,8 +66,8 @@ a {
 }
 
 img {
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
 }
 
