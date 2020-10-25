@@ -10,51 +10,48 @@
 </head>
 
 <body>
-    <!-- <div class="container">
-        <div class="card">
-            <div class="card-1 card-object">
-                <a class="face front" href="#">
-                    <div class="titleS">
-                        <div class="title">suzuki</div>
-                        <div class="subtitle">hayabusha</div>
-
-                    </div>M</a>
-                <a href="" class="face-back">
-                    <div class="img-wrapper">
-                 <img src="./media/Suzuki-Hayabusa.jpg" alt="suzuki">
-                    </div>
-                </a>
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="">
-
-            </div>
-        </div> -->
-        <div class="motorcycle-card">
-            <div class="card-inner">
-                <div class="full-detail">
-                    <h2>Full details</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet temporibus minus nam, sed quaerat odio iste ipsa autem suscipit, magnam mollitia iusto enim praesentium possimus modi tenetur neque, molestiae ratione <br> <a href="#">View More</a></p>
+    <div class="wrap">
+        <div class="flip-card">
+            <div class="front"  style="background-image: url(media/M1.jpg);"">
+                <p>BENELLI</p>
+                <div class="house">
+                    <div class="divider"></div>
+                    <span>weeh</span>
                 </div>
-                <div class="details">
-                    <div class="client-photo">
-                        <img src="./media/Suzuki-Hayabusa.jpg" alt="client-photo">
-                    </div>
-                </div>
-        
             </div>
-        
+            <div class="back">
+                <img src="./media/benelli-m1.jpg" alt="">
+                <em>"in the beginning ,there was nothing except happiness"</em>
+            </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $(".flip-card").click(function() {
-                    $(".card-inner").toggleClass("active")
-                })
-            })
-        </script>
+        <div class="flip-card">
+            <div class="front"  style="background-image: url(media/M2.jpg);"">
+                <p>BMW</p>
+                <div class="house">
+                    <div class="divider"></div>
+                    <span>weeh</span>
+                </div>
+            </div>
+            <div class="back">
+                <img src="./media/bmw-M2.jpg" alt="">
+                <em>"wind and green grasslands beyond"</em>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="front"  style="background-image: url(media/M3.jpg);"">
+                <p>SUZUKI</p>
+                <div class="house">
+                    <div class="divider"></div>
+                    <span>weeh</span>
+                </div>
+            </div>
+            <div class="back">
+                <img src="./media/suzuki-M3.jpg" alt="">
+                <em>"love is in the air"</em>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

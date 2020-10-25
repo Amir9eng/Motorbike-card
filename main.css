@@ -1,103 +1,133 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 3rem;
-} */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: thistle;
     font-size: 16px;
 }
-
-.motorcycle-card {
-    margin: 20vh auto;
-    width: 40vw;
-    height: 40vh;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 1rem;
-    perspective: 1000px;
+h1{
+    font-style: italic;
+    text-align: center;
+    font-size: 4rem;
 }
-
-.card-inner {
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.flip-card {
+    width: 25%;
+    height: 350px;
+    margin: 2rem;
     position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
+    cursor: pointer;
 }
 
-.full-detail {
-    background-color: blue;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 100%;
+.back,
+.front {
     height: 100%;
-    box-shadow: 2px 1px 5px;
-    margin: 0 auto;
-    position: absolute;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: rotateX(-180deg);
+    transition: transform 0.5s linear;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    background: #fff;
 }
 
-h2 {
-    display: block;
-    margin: 1.5rem 0;
-    font-size: 1.5rem;
+.red {
+    background-color: red;
 }
 
-a {
-    display: block;
-    text-decoration: none;
-    color: #07BBD4;
-    /* margin-left: 25rem; */
-    margin-top: .5rem;
-    text-align: right;
+.back {
+    transform: perspective(600px) rotateX(-180deg);
 }
 
-img {
-    width: 15rem;
-    height: 15rem;
+.card-rotate .back {
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.card-rotate .front {
+    transform: perspective(600px) rotateX(180deg);
+}
+
+.front {
+    background-size: cover;
+    background-color: #A49B9B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.front:hover {
+    background-blend-mode: multiply;
+}
+
+.front p {
+    position: absolute;
+    bottom: 0;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc .divider {
+    margin: 0 0 .5rem;
+    width: 10rem;
+    height: 1px;
+    background-color: white;
+}
+
+.front p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.desc span {
+    padding-bottom: .8rem;
+}
+
+.p {
+    z-index: -1;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5rem #B50E22 solid;
+    padding: 0 .5rem;
+}
+
+.back img {
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
 }
 
-.client-name {
-    padding: 1rem;
+.back em {
+    font-weight: 200;
+    padding: 0 .5rem;
+    text-align: center;
 }
 
-.details h3 {
-    color: #07BBD4;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.active {
-    transform: rotateX(180deg);
-}
-
-.details {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    box-shadow: 2px 1px 5px;
-    margin: 0 auto;
-    position: absolute;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: rotateX(0deg);
+@media (max-width:1024px) {
+    body {
+        overflow: auto;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .flip-card {
+        width: auto;
+    }
 }
