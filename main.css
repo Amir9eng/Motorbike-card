@@ -6,13 +6,13 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: thistle;
+    background-color: rgba(255, 255, 255, .9);
     font-size: 16px;
     width: 100%;
     height: 100%;
 }
 main{
-    position: relative;
+    /* position: relative; */
     width: 90vw;
     height: 70vh;
     column-gap: 4rem;
@@ -23,9 +23,31 @@ main{
     background: transparent;
     perspective: 1000px;
 }
+.card-rotate{
+    position: absolute;
+}
+#card1{
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    cursor: pointer;
+    background: transparent;
+    perspective: 1000px;
+}
 .front {
     text-align: center;
     line-height: 2.4;
+    background-color: grey;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back{
+    background-image: url(./media/M1.jpg);
+    background-position: center;
 }
 
 /* #card1:hover{
