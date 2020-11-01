@@ -25,7 +25,6 @@
         </div>
     </div>
 
-    <main>
         <div id="card1">
             <div class="back2"></div>
             <div class="front2">
@@ -41,8 +40,7 @@
                 </span>
             </div>
         </div>
-    </main>
-    <main>
+    
         <div id="card1">
             <div class="back3"></div>
             <div class="front3">
@@ -55,13 +53,19 @@
                 </span>
             </div>
         </div>
-    </main>
+    
 
     <script>
         $(document).ready(function() {
-           $("#card1").click(function() {
-               $(this).addClass("clicked")
-           })
+            $("#card1").click(function() {
+                if ($(this).hasClass("clicked")) {
+                    $("#card1").removeClass("clicked");
+                    $(this).toggleClass("clicked");
+                } else {
+                    $("#card1").removeClass("clicked");
+                }
+                $(this).toggleClass("clicked");
+            }) 
         })
     </script>
 
